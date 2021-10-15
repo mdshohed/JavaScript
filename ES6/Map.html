@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var number = [2, 35, 6, 3];
+      // vector
+      var a = [];
+      number.forEach(function (i) {
+        a.push(i * i);
+      });
+      document.write(a + "<br/>");
+
+      var b = number.map(function (i) {
+        return i * i;
+      });
+      document.write(b + "<br/>");
+
+      // x > array value;
+      var c = number.filter(function (i) {
+        return i > 5;
+      });
+      document.write(c);
+
+      // Arrow function
+      var students = [
+        {
+          name: "mdshohed",
+          id: 23,
+          gpa: 3.54,
+        },
+        {
+          name: "Tusar",
+          id: 23,
+          gpa: 4,
+        },
+        {
+          name: "Harry",
+          id: 23,
+          gpa: 2.4,
+        },
+        {
+          name: "bindu",
+          id: 23,
+          gpa: 3.55,
+        },
+      ];
+
+      console.log(students);
+      function student() {
+        students
+          .filter(function (i) {
+            return i.gpa > 3;
+          })
+          .map(function (i) {
+            return i.name;
+          });
+      }
+      console.log(student());
+
+      const student2 = () => {
+        return students.filter((i) => i.gpa > 3);
+      };
+      document.write(student2());
+    </script>
+  </body>
+</html>

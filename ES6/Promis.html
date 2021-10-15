@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("start");
+
+      const promise1 = new Promise((resolve, reject) => {
+        let val = false;
+        if (val) {
+          resolve("Promise 1");
+        } else {
+          reject("Promise 2");
+        }
+      });
+      promise1
+        .then((res) => {
+          document.write(res);
+        })
+        .catch((err) => {
+          document.write(err);
+        });
+
+      const promise2 = new Promise((resolve, reject) => {
+        resolve("completed 2");
+      });
+
+      promise2.then((res) => document.write(res));
+
+      document.write("end");
+    </script>
+  </body>
+</html>

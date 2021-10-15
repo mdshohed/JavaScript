@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const taskone = () => {
+        document.write("task 1");
+      };
+      const dataloading = () => {
+        document.write("data loading");
+      };
+      const tasktwo = () => {
+        //synchonization
+        // setTimeout(dataloading, 1000);
+
+        stTimeout(() => {
+          document.write("synchonization call");
+        }, 3000);
+      };
+      const taskthree = () => {
+        setTimeout(taskone, 500);
+      };
+      const taskfour = () => {
+        document.write("task 4");
+      };
+
+      taskone();
+      tasktwo();
+      taskthree();
+      taskfour();
+    </script>
+  </body>
+</html>

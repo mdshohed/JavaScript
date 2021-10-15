@@ -1,0 +1,9 @@
+.audio {
+  height: 50px;
+  width: 100px;
+  background-color: rgb(32, 196, 100);
+}
+.anim {
+  box-shadow: 0 15px 18px;
+  opacity: 0.5;
+}
